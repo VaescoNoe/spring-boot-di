@@ -7,7 +7,7 @@ public class MiServicio implements IServicio{
 
 	@Override
 	public String operacion() {
-		return "ejecutando un proceso importante...";
+		return "ejecutando un proceso importante simple...";
 	}
 
 	
