@@ -4,11 +4,14 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
+import org.springframework.web.context.annotation.SessionScope;
 
 @Component
 @PropertySources({
 	@PropertySource("classpath:clienteComponent.properties")
 })
+@RequestScope
 public class Cliente {
 
 	@Value("${cliente.nombre}")
@@ -29,6 +32,7 @@ public class Cliente {
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
+
 	
 	
 }

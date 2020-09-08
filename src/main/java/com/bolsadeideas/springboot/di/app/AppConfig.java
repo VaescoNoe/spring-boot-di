@@ -28,7 +28,8 @@ public class AppConfig {
 	}
 	
 	
-	@Bean("itemsFactura")
+	@Bean("itemFactura")
+	@Primary
 	public List<ItemFactura> registrarItems(){		
 		return Arrays.asList(
 				new ItemFactura(
@@ -36,6 +37,27 @@ public class AppConfig {
 						, 2),
 				new ItemFactura(
 						new Producto("Bicicleta", 80)
+						, 4),
+				new ItemFactura(
+						new Producto("PS4", 150)
+						, 4)
+				);
+	}
+	
+	@Bean("itemFacturaOficina")
+	public List<ItemFactura> registrarItemsOficina(){		
+		return Arrays.asList(
+				new ItemFactura(
+						new Producto("MonitorLG", 100)
+						, 2),
+				new ItemFactura(
+						new Producto("Notebook Asus", 80)
+						, 1),
+				new ItemFactura(
+						new Producto("Impresora HP", 150)
+						, 3),
+				new ItemFactura(
+						new Producto("Escritorio", 150)
 						, 4)
 				);
 	}
